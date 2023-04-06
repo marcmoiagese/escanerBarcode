@@ -18,7 +18,8 @@ while True:
 
     # Si s'ha llegit algun codi de barres, el mostrem per pantalla
     if codes:
-        print('Codi de barres: {}'.format(codes))
+        for code in codes:
+            print('Codi de barres: {}'.format(code.data.decode()))
 
     # Mostrem el frame per pantalla
     cv2.imshow('frame', frame)
